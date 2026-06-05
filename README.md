@@ -6,6 +6,7 @@
 6. In year view we can see how much tasks as tooltip.
 7. In month view only 2 tasks will appear and the rest as +n more tasks.
 8. In day and week view we show all tasks as there is drag feature. 
+9. If the title too long only show some portion and then ...
 
 
 # Running 
