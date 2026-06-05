@@ -1,0 +1,257 @@
+/* Responsive Design Breakpoints */
+
+/* Mobile First Approach */
+
+/* Small devices (landscape phones, < 640px) */
+@media (max-width: 639px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  /* Calendar adjustments for mobile */
+  .calendar-container {
+    padding: var(--spacing-sm);
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  /* Hide week and day views on mobile */
+  .view-week,
+  .view-day {
+    display: none;
+  }
+
+  /* Month view only on mobile */
+  .view-month {
+    display: block;
+  }
+
+  /* Task cards */
+  .task-card {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm);
+  }
+
+  /* Modal adjustments */
+  .modal {
+    width: 90vw;
+    max-width: none;
+  }
+
+  .modal--sm,
+  .modal--md,
+  .modal--lg {
+    width: 90vw;
+    max-width: 90vw;
+  }
+
+  /* Form inputs */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Tablets (≥ 640px and < 1024px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+
+  .container {
+    padding: var(--spacing-lg);
+  }
+
+  /* Show week and month views on tablet */
+  .view-month,
+  .view-week {
+    display: block;
+  }
+
+  .view-day,
+  .view-year {
+    display: none;
+  }
+
+  /* Calendar header adjustments */
+  .calendar-header {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+
+  /* Modal sizing */
+  .modal--sm {
+    max-width: 400px;
+  }
+
+  .modal--md {
+    max-width: 500px;
+  }
+
+  .modal--lg {
+    max-width: 600px;
+  }
+}
+
+/* Large devices (desktops, ≥ 1024px) */
+@media (min-width: 1024px) {
+  .hide-desktop {
+    display: none !important;
+  }
+
+  .container {
+    padding: var(--spacing-xl);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Show all views on desktop */
+  .view-month,
+  .view-week,
+  .view-day,
+  .view-year {
+    display: block;
+  }
+
+  /* Calendar layout */
+  .calendar-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Modal sizing */
+  .modal--sm {
+    max-width: 500px;
+  }
+
+  .modal--md {
+    max-width: 700px;
+  }
+
+  .modal--lg {
+    max-width: 900px;
+  }
+
+  /* Sidebar on desktop */
+  .calendar-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+/* Extra large devices (≥ 1440px) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .calendar-layout {
+    grid-template-columns: 350px 1fr;
+  }
+
+  /* Larger fonts */
+  body {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* Utilities for different screen sizes */
+
+/* Mobile utilities */
+@media (max-width: 639px) {
+  .flex-column-mobile {
+    flex-direction: column;
+  }
+
+  .text-center-mobile {
+    text-align: center;
+  }
+
+  .full-width-mobile {
+    width: 100%;
+  }
+
+  .mt-mobile {
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* Tablet utilities */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .flex-row-tablet {
+    flex-direction: row;
+  }
+
+  .grid-2-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop utilities */
+@media (min-width: 1024px) {
+  .flex-row-desktop {
+    flex-direction: row;
+  }
+
+  .grid-3-desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sticky-desktop {
+    position: sticky;
+    top: 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .btn,
+  .modal,
+  .spinner {
+    display: none !important;
+  }
+}
+
+/* Accessibility */
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --border-color: #000000;
+  }
+}
+
+/* Dark mode (if supported) */
+@media (prefers-color-scheme: dark) {
+  /* Can be extended for dark mode support */
+}

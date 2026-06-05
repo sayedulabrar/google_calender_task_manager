@@ -1,0 +1,56 @@
+/* Dashboard Styles */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+}
+
+.dashboard-search {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.dashboard-search .search-bar {
+  max-width: 500px;
+}
+
+/* Responsive */
+@media (max-width: 639px) {
+  .dashboard-content {
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+
+  .dashboard-search {
+    padding: var(--spacing-md) 0;
+  }
+
+  .dashboard-search .search-bar {
+    max-width: 100%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .dashboard-search {
+    justify-content: flex-end;
+  }
+
+  .dashboard-search .search-bar {
+    max-width: 400px;
+  }
+}
