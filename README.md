@@ -1,4 +1,4 @@
-### Features:
+# Features
 1. can create tasks using create new task. 
 2. can select Drag factor to decide how much task can be dragged in timeline in Day view. We can then drag it and it will update when we remove click. For Week view we can also do the same and drag between days too. 
 3. At the top left we can see a filter . The calender will appear based on it. today button only available for Day View. 
