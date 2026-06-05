@@ -1,7 +1,7 @@
 *.log
 .DS_Store
 .phpactor.json
-.env.keyed
+.env.*
 .phpunit.result.cache
 /.fleet
 /.idea
