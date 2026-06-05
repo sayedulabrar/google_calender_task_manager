@@ -6,3 +6,7 @@
 6. In year view we can see how much tasks as tooltip.
 7. In month view only 2 tasks will appear and the rest as +n more tasks.
 8. In day and week view we show all tasks as there is drag feature. 
+
+
+# Running 
+use `docker compose up --build` to run and `docker compose down -v` to down and up again normally. Wait for some time to finish the build process and hit `http://localhost:5173/` for viewing the work. 
